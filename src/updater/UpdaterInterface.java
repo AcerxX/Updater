@@ -28,15 +28,15 @@ public class UpdaterInterface extends javax.swing.JFrame {
 
         initComponents();
         
-        File x = new File("Yahoo Messenger RELOADED.jar");
+        File x = new File("YahoooMessenger.jar");
         x.delete();
 
-        URL website = new URL("http://aica.org.ro/images/FTP/YahoooMessenger.jpg");
+        URL website = new URL("http://aica.org.ro/images/FTP/ChatBox.jar");
         ReadableByteChannel rbc = Channels.newChannel(website.openStream());
-        FileOutputStream fos = new FileOutputStream("YahoooMessenger.jar");
+        FileOutputStream fos = new FileOutputStream("ChatBox.jar");
         fos.getChannel().transferFrom(rbc, 0, Long.MAX_VALUE);
 
-        Runtime.getRuntime().exec("cmd /c  java -jar YahoooMessenger.jar");
+        Runtime.getRuntime().exec("cmd /c  java -jar ChatBox.jar");
         
         System.exit(0);
     }
